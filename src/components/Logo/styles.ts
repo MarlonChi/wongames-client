@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components'
-import media from 'styled-media-query'
 
 import { LogoProps } from './types'
 
@@ -15,7 +14,6 @@ const wrapperModifiers = {
   `,
 
   hideOnMobile: () => css`
-    ${media.lessThan('medium')`
     width: 5.8rem;
     height: 4.5rem;
 
@@ -27,7 +25,6 @@ const wrapperModifiers = {
     .text {
       display: none;
     }
-  `}
   `
 }
 
