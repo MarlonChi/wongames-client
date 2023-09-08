@@ -7,6 +7,9 @@ export default {
   argTypes: {
     color: {
       control: { type: 'inline-radio' }
+    },
+    size: {
+      control: { type: 'inline-radio' }
     }
   }
 } as Meta
