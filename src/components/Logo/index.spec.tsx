@@ -42,6 +42,6 @@ describe('<Logo/>', () => {
 
     const element = screen.getByLabelText(/Won Games/i).parentElement
 
-    expect(element).toHaveStyleRule('width', '5.8rem')
+    expect(element).toHaveStyleRule('width', '11rem')
   })
 })
