@@ -29,8 +29,8 @@ WithIcon.args = {
   icon: <AddShoppingCart />
 }
 
-export const asLink: StoryObj = {}
-asLink.args = {
+export const AsLink: StoryObj = {}
+AsLink.args = {
   children: 'Buy now',
   size: 'large',
   as: 'a',
