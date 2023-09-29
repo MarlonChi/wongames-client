@@ -1,6 +1,9 @@
 const config = {
   staticDirs: ['../public'],
-  stories: ['../src/components/**/index.stories.tsx'],
+  stories: [
+    '../src/components/**/index.stories.tsx',
+    '../src/templates/**/index.stories.tsx'
+  ],
   addons: ['@storybook/addon-essentials'],
   framework: {
     name: '@storybook/nextjs',
