@@ -8,8 +8,8 @@ export type HomeTemplateProps = {
   mostPopularHighlight: HighlightProps
   mostPopularGames: GameCardProps[]
   upcommingGames: GameCardProps[]
-  upcommingHighlight: HighlightProps
+  upcommingHighligth: HighlightProps
   upcommingMoreGames: GameCardProps[]
   freeGames: GameCardProps[]
-  freeHighlight: HighlightProps
+  freeHighligth: HighlightProps
 }
