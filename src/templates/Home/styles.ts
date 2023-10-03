@@ -42,7 +42,7 @@ export const SectionNews = styled(Sections)`
   ${({ theme }) => css`
     margin-bottom: calc(${theme.spacings.xxlarge} * 2);
     ${media.greaterThan('large')`
-      margin-top: -5rem;
+      margin-top: 0rem;
     `}
     ${media.greaterThan('medium')`
       margin-bottom: 0;
