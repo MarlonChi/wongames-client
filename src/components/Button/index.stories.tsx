@@ -36,3 +36,11 @@ AsLink.args = {
   as: 'a',
   href: '/link'
 }
+
+export const Minimal: StoryObj = {}
+Minimal.args = {
+  children: 'Buy now',
+  size: 'medium',
+  minimal: true,
+  icon: <AddShoppingCart />
+}
