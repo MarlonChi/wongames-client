@@ -1,4 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react'
+import { Email } from '@styled-icons/material-outlined'
+
 import TextField from '.'
 
 export default {
@@ -7,6 +9,7 @@ export default {
   args: {
     label: 'E-mail',
     labelFor: 'Email',
+    icon: <Email />,
     id: 'Email',
     initialvalue: '',
     placeholder: 'marlon@teste.com'
