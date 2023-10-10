@@ -25,3 +25,14 @@ export const Default: StoryObj = {
     </div>
   )
 }
+
+export const WithError: StoryObj = {
+  render: (args) => (
+    <div style={{ maxWidth: 300, padding: 15 }}>
+      <TextField {...args} />
+    </div>
+  )
+}
+WithError.args = {
+  error: 'Ops...something is wrong'
+}
