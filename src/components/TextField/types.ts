@@ -6,4 +6,7 @@ export type TextFieldProps = {
   labelFor?: string
   initialValue?: string
   icon?: React.ReactNode
+  iconPosition?: 'right' | 'left'
 } & InputHTMLAttributes<HTMLInputElement>
+
+export type IconPositionProps = Pick<TextFieldProps, 'iconPosition'>

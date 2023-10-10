@@ -11,7 +11,6 @@ export default {
     labelFor: 'Email',
     icon: <Email />,
     id: 'Email',
-    initialvalue: '',
     placeholder: 'marlon@teste.com'
   },
   argTypes: {
