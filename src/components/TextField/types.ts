@@ -7,6 +7,7 @@ export type TextFieldProps = {
   initialValue?: string
   icon?: React.ReactNode
   iconPosition?: 'right' | 'left'
+  disabled?: boolean
 } & InputHTMLAttributes<HTMLInputElement>
 
 export type IconPositionProps = Pick<TextFieldProps, 'iconPosition'>
