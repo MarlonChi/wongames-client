@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react'
 import Menu from '.'
 
 export default {
-  title: 'Menu',
+  title: 'Components/Menu',
   component: Menu
 } as Meta
 

@@ -6,7 +6,7 @@ import item from './mock'
 import { HighlightProps } from './types'
 
 export default {
-  title: 'Highlight',
+  title: 'Components/Highlight',
   component: Highlight,
   args: { ...item }
 } as Meta
