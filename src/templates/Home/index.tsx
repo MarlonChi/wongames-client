@@ -1,6 +1,5 @@
 import { Container } from '../../components/Container'
-import Footer from '../../components/Footer'
-import Menu from '../../components/Menu'
+import Base from '../Base'
 import BannerSlider from '../../components/BannerSlider'
 import Showcase from '../../components/Showcase'
 
@@ -19,9 +18,8 @@ const Home = () => (
   // freeGames,
   // freeHighligth
   // }: HomeTemplateProps
-  <section>
+  <Base>
     <Container>
-      <Menu />
       <S.SectionBanner>
         <BannerSlider items={BannerSliderMock} />
       </S.SectionBanner>
@@ -47,13 +45,7 @@ const Home = () => (
       highlight={HighlightMock}
       games={GameCardSliderMock}
     />
-
-    <S.SectionFooter>
-      <Container>
-        <Footer />
-      </Container>
-    </S.SectionFooter>
-  </section>
+  </Base>
 )
 
 export default Home
