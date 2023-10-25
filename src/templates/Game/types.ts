@@ -5,6 +5,7 @@ export type GameTemplateProps = {
   cover: string
   gameInfo: GameInfoProps
   gallery?: GalleryImageProps[]
+  description: string
 }
 
 export type CoverProps = {
