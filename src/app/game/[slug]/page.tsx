@@ -6,6 +6,7 @@ import { GameTemplateProps } from '../../../templates/Game/types'
 import {
   descriptionHTML,
   galleryMock,
+  gameDetails,
   gameInfoMock
 } from '../../../templates/Game/mock'
 
@@ -17,6 +18,7 @@ export default function Index(props: GameTemplateProps) {
       gameInfo={gameInfoMock}
       gallery={galleryMock}
       description={descriptionHTML}
+      details={gameDetails}
     />
   )
 }
@@ -40,7 +42,8 @@ export async function getStaticProps() {
           'Experience the epic space strategy games that redefined the RTS genre. Control your fleet and buld an armada across more than 30 single-player missions.'
       },
       gallery: galleryMock,
-      description: descriptionHTML
+      description: descriptionHTML,
+      details: gameDetails
     }
   }
 }

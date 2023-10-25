@@ -65,3 +65,12 @@ Claim in-game swag &amp; digital goodies inspired by CD PROJEKT RED games as par
 CD PROJEKT S.A. All rights reserved. All other copyrights and trademarks are the property of their
 respective owners.
 </p></div>`
+
+export const gameDetails = {
+  developer: 'Different Tales',
+  releaseDate: '2020-11-21T23:00:00',
+  platforms: ['windows', 'linux', 'mac'],
+  publisher: 'Walkabout',
+  rating: 'BR0',
+  genres: ['Role-playing', 'Narrative']
+}
