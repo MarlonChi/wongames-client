@@ -26,7 +26,9 @@ const Menu = ({ user }: MenuProps) => {
       </MediaMatch>
 
       <S.LogoWrapper>
-        <Logo hideOnMobile />
+        <Link href="/">
+          <Logo hideOnMobile />
+        </Link>
       </S.LogoWrapper>
 
       <MediaMatch greaterThan="medium">
@@ -54,7 +56,9 @@ const Menu = ({ user }: MenuProps) => {
         <S.MenuNav>
           {!user && (
             <>
-              <S.MenuLink href="#">Home</S.MenuLink>
+              <Link href="/">
+                <S.MenuLink href="#">Home</S.MenuLink>
+              </Link>
               <S.MenuLink href="#">Explore</S.MenuLink>
             </>
           )}
