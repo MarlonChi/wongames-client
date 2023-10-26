@@ -7,7 +7,9 @@ import {
   descriptionHTML,
   galleryMock,
   gameDetails,
-  gameInfoMock
+  gameInfoMock,
+  highlightMock,
+  sliderMock
 } from '../../../templates/Game/mock'
 
 export default function Index(props: GameTemplateProps) {
@@ -19,6 +21,9 @@ export default function Index(props: GameTemplateProps) {
       gallery={galleryMock}
       description={descriptionHTML}
       details={gameDetails}
+      upcomingGames={sliderMock}
+      upcomingHighlight={highlightMock}
+      recommendedGames={sliderMock}
     />
   )
 }
@@ -43,7 +48,10 @@ export async function getStaticProps() {
       },
       gallery: galleryMock,
       description: descriptionHTML,
-      details: gameDetails
+      details: gameDetails,
+      upcomingGames: sliderMock,
+      upcomingHighlight: highlightMock,
+      recommendedGames: sliderMock
     }
   }
 }

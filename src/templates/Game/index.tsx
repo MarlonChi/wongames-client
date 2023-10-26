@@ -2,6 +2,7 @@ import GameInfo from '../../components/GameInfo'
 import Gallery from '../../components/Gallery'
 import TextContent from '../../components/TextContent'
 import GameDetails from '../../components/GameDetails'
+import Showcase from '../../components/Showcase'
 
 import Base from '../Base'
 
@@ -14,7 +15,10 @@ const Game = ({
   gameInfo,
   gallery,
   description,
-  details
+  details,
+  upcomingGames,
+  upcomingHighlight,
+  recommendedGames
 }: GameTemplateProps) => (
   <Base>
     <S.Cover src={cover} role="image" aria-label="cover" />
@@ -35,6 +39,14 @@ const Game = ({
       <S.SectionGameDetails>
         <GameDetails {...details} />
       </S.SectionGameDetails>
+
+      <Showcase
+        title="Upcoming"
+        games={upcomingGames}
+        highlight={upcomingHighlight}
+      />
+
+      <Showcase title="You  may like these games" games={recommendedGames} />
     </S.Main>
   </Base>
 )
