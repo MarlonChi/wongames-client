@@ -3,10 +3,10 @@
 import React from 'react'
 import Game from '../../../templates/Game'
 import { GameTemplateProps } from '../../../templates/Game/types'
+import GameDetailsMock from '../../../components/GameDetails/mock'
 import {
   descriptionHTML,
   galleryMock,
-  gameDetails,
   gameInfoMock,
   highlightMock,
   sliderMock
@@ -20,7 +20,7 @@ export default function Index(props: GameTemplateProps) {
       gameInfo={gameInfoMock}
       gallery={galleryMock}
       description={descriptionHTML}
-      details={gameDetails}
+      details={GameDetailsMock}
       upcomingGames={sliderMock}
       upcomingHighlight={highlightMock}
       recommendedGames={sliderMock}
@@ -48,7 +48,7 @@ export async function getStaticProps() {
       },
       gallery: galleryMock,
       description: descriptionHTML,
-      details: gameDetails,
+      details: GameDetailsMock,
       upcomingGames: sliderMock,
       upcomingHighlight: highlightMock,
       recommendedGames: sliderMock
