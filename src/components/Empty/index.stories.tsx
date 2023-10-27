@@ -5,7 +5,7 @@ import Empty from '.'
 import { EmptyProps } from './types'
 
 export default {
-  title: 'Empty',
+  title: 'Components/Empty',
   component: Empty,
   parameters: {
     backgrounds: {
