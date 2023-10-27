@@ -4,11 +4,10 @@ import Showcase from '../../components/Showcase'
 import GameCard from '../../components/GameCard'
 
 import { Grid } from '../../components/Grid'
+import { Divider } from '../../components/Divider'
 import { Container } from '../../components/Container'
 
 import { WishlistTemplateProps } from './types'
-
-// import * as S from './styles'
 
 const Wishlist = ({
   games,
@@ -26,6 +25,8 @@ const Wishlist = ({
           <GameCard key={`wishlist-${index}`} {...game} />
         ))}
       </Grid>
+
+      <Divider />
     </Container>
     <Showcase
       title="You may like these games"

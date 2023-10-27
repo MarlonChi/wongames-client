@@ -3,6 +3,7 @@ import Gallery from '../../components/Gallery'
 import TextContent from '../../components/TextContent'
 import GameDetails from '../../components/GameDetails'
 import Showcase from '../../components/Showcase'
+import { Divider } from '../../components/Divider'
 
 import Base from '../Base'
 
@@ -38,6 +39,7 @@ const Game = ({
 
       <S.SectionGameDetails>
         <GameDetails {...details} />
+        <Divider />
       </S.SectionGameDetails>
 
       <Showcase
