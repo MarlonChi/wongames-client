@@ -6,7 +6,7 @@ import { CartListProps } from './types'
 import CartList from '.'
 
 export default {
-  title: 'CartList',
+  title: 'Components/CartList',
   component: CartList,
   parameters: {
     backgrounds: {

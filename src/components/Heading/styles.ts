@@ -13,6 +13,7 @@ export const wrapperModifiers = {
 
     &::after {
       width: 3rem;
+      border-width: 0.2rem;
     }
   `,
 
