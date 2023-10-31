@@ -51,6 +51,10 @@ const GlobalStyles: GlobalStyleComponent<
       font-size: 62.5%;
     }
 
+    a {
+      text-decoration: none;
+    }
+
     body {
       font-family: ${theme.font.family};
       font-size: ${theme.font.sizes.medium};
