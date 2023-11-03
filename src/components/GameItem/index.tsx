@@ -1,7 +1,8 @@
+import { Download } from 'styled-icons/boxicons-solid'
+
 import { GameItemProps } from './types'
 
 import * as S from './styles'
-import { Download } from 'styled-icons/boxicons-solid'
 
 const GameItem = ({
   img,
