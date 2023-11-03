@@ -3,5 +3,5 @@
 import Profile from '../../../templates/Profile'
 
 export default function Orders() {
-  return <Profile />
+  return <Profile>Wait</Profile>
 }
