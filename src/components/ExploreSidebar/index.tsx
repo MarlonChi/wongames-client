@@ -1,59 +1,56 @@
+import { useState } from 'react'
+
 import Heading from '../Heading'
 import Checkbox from '../Checkbox'
 import Radio from '../Radio'
 import Button from '../Button'
 
+import { ExploreSidebarProps } from './types'
+
 import * as S from './styles'
 
-const ExploreSidebar = () => (
-  <S.Wrapper>
-    <Heading lineBottom lineColor="secondary" size="small">
-      Price
-    </Heading>
-    <Checkbox name="under-50" label="Under $50" labelFor="under-50" />
-    <Checkbox name="under-100" label="Under $100" labelFor="under-100" />
-    <Checkbox name="under-150" label="Under $150" labelFor="under-150" />
-    <Checkbox name="under-200" label="Under $200" labelFor="under-200" />
-    <Checkbox name="free" label="Free" labelFor="free" />
-    <Checkbox name="discounted" label="Discount" labelFor="discounted" />
+const ExploreSidebar = ({ items, initialValues = {} }: ExploreSidebarProps) => {
+  const [values, setValues] = useState(initialValues)
 
-    <Heading lineBottom lineColor="secondary" size="small">
-      Sort by
-    </Heading>
-    <Radio
-      id="high-to-low"
-      name="sort-by"
-      label="High to low"
-      labelFor="high-to-low"
-      value="high-to-low"
-    />
-    <Radio
-      id="low-to-high"
-      name="sort-by"
-      label="Low to High"
-      labelFor="low-to-high"
-      value="low-to-high"
-    />
+  return (
+    <S.Wrapper>
+      {items.map((item) => (
+        <div key={item.title}>
+          <Heading lineBottom lineColor="secondary" size="small">
+            {item.title}
+          </Heading>
 
-    <Heading lineBottom lineColor="secondary" size="small">
-      System
-    </Heading>
-    <Checkbox name="windows" label="Windows" labelFor="windows" />
-    <Checkbox name="mac" label="Mac" labelFor="mac" />
-    <Checkbox name="linux" label="Linux" labelFor="linux" />
+          {item.type === 'checkbox' &&
+            item.field.map((field) => (
+              <Checkbox
+                key={field.name}
+                name={field.name}
+                label={field.label}
+                labelFor={field.name}
+                isChecked={!!values[field.name]}
+              />
+            ))}
 
-    <Heading lineBottom lineColor="secondary" size="small">
-      Genre
-    </Heading>
-    <Checkbox name="action" label="Action" labelFor="action" />
-    <Checkbox name="adventure" label="Adventure" labelFor="adventure" />
-    <Checkbox name="fps" label="FPS" labelFor="fps" />
-    <Checkbox name="mmorpg" label="MMORPG" labelFor="mmorpg" />
+          {item.type === 'radio' &&
+            item.field.map((field) => (
+              <Radio
+                key={field.name}
+                id={field.name}
+                name={item.name}
+                label={field.label}
+                labelFor={field.name}
+                value={field.name}
+                defaultChecked={field.name === values[item.name]}
+              />
+            ))}
+        </div>
+      ))}
 
-    <Button fullWidth size="medium">
-      Filter
-    </Button>
-  </S.Wrapper>
-)
+      <Button fullWidth size="medium">
+        Filter
+      </Button>
+    </S.Wrapper>
+  )
+}
 
 export default ExploreSidebar
