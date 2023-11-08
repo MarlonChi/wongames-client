@@ -1,6 +1,7 @@
 export type ExploreSidebarProps = {
   items: ItemProps[]
   initialValues?: Values
+  onFilter: (values: Values) => void
 }
 
 type ItemProps = {
@@ -17,4 +18,8 @@ type Fields = {
 
 type Values = {
   [field: string]: boolean | string
+}
+
+export type WrapperProps = {
+  isOpen: boolean
 }
