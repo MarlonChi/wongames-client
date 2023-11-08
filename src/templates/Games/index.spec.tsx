@@ -29,7 +29,7 @@ jest.mock('../../components/GameCard', () => ({
 describe('<Games />', () => {
   it('should render sections', () => {
     renderWithTheme(
-      <Games filterItems={filterItemsMock} games={[gamesMock[0]]} />
+      <Games filterItem={filterItemsMock} games={[gamesMock[0]]} />
     )
 
     expect(screen.getByTestId('Mock ExploreSidebar')).toBeInTheDocument()
