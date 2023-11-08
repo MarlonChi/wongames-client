@@ -4,7 +4,7 @@ export type ExploreSidebarProps = {
   onFilter: (values: Values) => void
 }
 
-type ItemProps = {
+export type ItemProps = {
   title: string
   name: string
   type: string
