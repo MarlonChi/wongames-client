@@ -61,6 +61,7 @@ exports[`<CartList/> should render the cart list 1`] = `
   padding: 2rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .c8 {
@@ -161,7 +162,9 @@ exports[`<CartList/> should render the cart list 1`] = `
   <div
     class="c7"
   >
-    Total 
+    <span>
+      Total: 
+    </span>
     <p
       class="c8"
     >
