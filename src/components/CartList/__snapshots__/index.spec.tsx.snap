@@ -139,7 +139,7 @@ exports[`<CartList/> should render the cart list 1`] = `
         class="c3"
       >
         <img
-          alt="Red Dead Redemption 2"
+          alt="Resident Evil 2"
           src="https://images.unsplash.com/photo-1583337426008-2fef51aa841d?auto=format&fit=crop&q=80&w=1288&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         />
       </div>
@@ -149,7 +149,7 @@ exports[`<CartList/> should render the cart list 1`] = `
         <h3
           class="c5"
         >
-          Red Dead Redemption 2
+          Resident Evil 2
         </h3>
         <p
           class="c6"
