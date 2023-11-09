@@ -20,3 +20,13 @@ export const Default: StoryObj<CartDropdownProps> = {
     </div>
   )
 }
+
+export const EmptyCart: StoryObj<CartDropdownProps> = {
+  render: () => (
+    <div
+      style={{ maxWidth: '98%', display: 'flex', justifyContent: 'flex-end' }}
+    >
+      <CartDropdown />
+    </div>
+  )
+}
