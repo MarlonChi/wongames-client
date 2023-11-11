@@ -4,15 +4,17 @@ import Link from 'next/link'
 import Logo from '../Logo'
 import Button from '../Button'
 import MediaMatch from '../MediaMatch'
+import CartDropdown from '../CartDropdown'
+import CartIcon from '../CartIcon'
 
 import { MenuProps } from './types'
 
 import { Menu2 as MenuIcon } from '@styled-icons/remix-fill/Menu2'
-import { ShoppingCart as ShoppingCartIcon } from '@styled-icons/material-outlined/ShoppingCart'
 import { Search as SearchIcon } from '@styled-icons/material-outlined/Search'
 import { Close as CloseIcon } from '@styled-icons/material-outlined/Close'
 
 import * as S from './styles'
+import UserDropdown from '../UserDropdown'
 
 const Menu = ({ user }: MenuProps) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -33,8 +35,12 @@ const Menu = ({ user }: MenuProps) => {
 
       <MediaMatch greaterThan="medium">
         <S.MenuNav>
-          <S.MenuLink href="#">Home</S.MenuLink>
-          <S.MenuLink href="#">Explore</S.MenuLink>
+          <Link href="/">
+            <S.MenuLink href="#">Home</S.MenuLink>
+          </Link>
+          <Link href="/games">
+            <S.MenuLink href="#">Explore</S.MenuLink>
+          </Link>
         </S.MenuNav>
       </MediaMatch>
 
@@ -43,29 +49,47 @@ const Menu = ({ user }: MenuProps) => {
           <SearchIcon aria-label="Search" />
         </S.IconWrapper>
         <S.IconWrapper>
-          <ShoppingCartIcon aria-label="Open Shopping Cart" />
+          <MediaMatch greaterThan="medium">
+            <CartDropdown aria-label="Open Shopping Cart" />
+          </MediaMatch>
+          <MediaMatch lessThan="medium">
+            <Link href="/cart">
+              <CartIcon />
+            </Link>
+          </MediaMatch>
         </S.IconWrapper>
         <MediaMatch greaterThan="medium">
-          <Link href="/sign-in" passHref>
-            <Button as="a">Sign in</Button>
-          </Link>
+          {!user ? (
+            <Link href="/sign-in" passHref>
+              <Button as="a">Sign in</Button>
+            </Link>
+          ) : (
+            <UserDropdown username={user} />
+          )}
         </MediaMatch>
       </S.MenuGroup>
+
       <S.MenuFull aria-hidden={!isOpen} isOpen={isOpen}>
         <CloseIcon aria-label="Close Menu" onClick={() => setIsOpen(false)} />
         <S.MenuNav>
-          {!user && (
+          {user && (
             <>
               <Link href="/">
                 <S.MenuLink href="#">Home</S.MenuLink>
               </Link>
-              <S.MenuLink href="#">Explore</S.MenuLink>
+              <Link href="/games">
+                <S.MenuLink href="#">Explore</S.MenuLink>
+              </Link>
             </>
           )}
           {user && (
             <>
-              <S.MenuLink href="#">My account</S.MenuLink>
-              <S.MenuLink href="#">Wishlist</S.MenuLink>
+              <Link href="/profile/me">
+                <S.MenuLink href="#">My profile</S.MenuLink>
+              </Link>
+              <Link href="/wishlist">
+                <S.MenuLink href="#">Wishlist</S.MenuLink>
+              </Link>
             </>
           )}
         </S.MenuNav>

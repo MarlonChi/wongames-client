@@ -3,7 +3,7 @@ import UserDropdown from '.'
 import { UserDropdownProps } from './types'
 
 export default {
-  title: 'UserDropdown',
+  title: 'components/UserDropdown',
   component: UserDropdown,
   parameters: {
     backgrounds: {
